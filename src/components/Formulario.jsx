@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -13,11 +13,20 @@ const coloresAutorizados = {
 };
 
 const Formulario = () => {
+    //cargo los colores seleccionados que se guardaron en el local storage
+    const coloresLocalStorage = JSON.parse(localStorage.getItem("keyListaColores")) || [];
     //en el evento onChange en el FormControl necesito ir guardando lo que se escribe, esto lo hago en la variable de estado color.
     const [color, setColor] = useState("");
     //en el evento onSubmit del Form necesito guardar la variable color en un arreglo de colores
     //para ello primero debo crear el arreglo:
-    const [listaColores, setListaColores] = useState([]);
+    //inicializo la variable con el arreglo de colores cargados en el local storage
+    const [listaColores, setListaColores] = useState([coloresLocalStorage]);
+
+    //ciclo de vida del componente
+    useEffect(() => {
+        //guardar el arreglo de los colores en el local storage
+        localStorage.setItem("keyListaColores", JSON.stringify(listaColores));
+    }, [listaColores]);
 
     //para el evento onSubmit del form usamos un manejador de eventos
     const handleSubmit = (e) => {
