@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ListaColores from "./ListaColores";
 import "../App.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -10,6 +11,12 @@ const coloresAutorizados = {
     verde: `#1A6D02`,
     amarillo: `#F8F806`,
     azul: `#0615F8`,
+    celeste: `#7CEEEE `,
+    blanco: `#FFFFFF `,
+    negro: `#000000 `,
+    rosa: `#E97BF9`,
+    violeta: `#7406F8`,
+    naranja: `#F89106`,
 };
 
 const Formulario = () => {
@@ -20,7 +27,7 @@ const Formulario = () => {
     //en el evento onSubmit del Form necesito guardar la variable color en un arreglo de colores
     //para ello primero debo crear el arreglo:
     //inicializo la variable con el arreglo de colores cargados en el local storage
-    const [listaColores, setListaColores] = useState([coloresLocalStorage]);
+    const [listaColores, setListaColores] = useState(coloresLocalStorage);
 
     //ciclo de vida del componente
     useEffect(() => {
@@ -50,6 +57,8 @@ const Formulario = () => {
         }
     };
 
+    const borrarColor = () => {};
+
     return (
         <>
             <section className="container">
@@ -58,13 +67,13 @@ const Formulario = () => {
                         <Form.Label className="mt-2 mb-0">Administrador de colores</Form.Label>
                         <hr></hr>
                         <div className="row">
-                            <aside className="col-2 ms-3 muestra"></aside>
+                            <aside className="col-2 ms-3 muestraForm"></aside>
                             <aside className="col-8 ms-3">
                                 <Form.Control
                                     size="sm"
                                     type="text"
                                     placeholder="Ingresa un color"
-                                    onChange={(e) => setColor(e.target.value)}
+                                    onChange={(e) => setColor(e.target.value.toLowerCase())}
                                     value={color}
                                 />
                                 <Form.Text className="text-muted">Elige entre rojo, azul, verde o amarillo</Form.Text>
@@ -78,6 +87,7 @@ const Formulario = () => {
                     </Form.Group>
                 </Form>
             </section>
+            <ListaColores listaColores={listaColores} borrarColor={borrarColor} />
         </>
     );
 };
