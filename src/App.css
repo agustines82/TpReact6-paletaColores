@@ -9,6 +9,9 @@ form {
     border: thin solid black;
     background-color: blueviolet;
 }
-.w-20 {
-    width: 180px;
+.cardColor {
+    background-color: rgb(232, 238, 238);
+    border: thin solid #575555;
+    box-shadow: -3px 3px rgb(69, 70, 70);
+    border-radius: 5px;
 }
