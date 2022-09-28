@@ -1,6 +1,6 @@
 # Trabajo Practico de React - Paleta de colores
 
-Trabajo practico que consiste en crear un proyecto de react que muestre un formulario con un input y un button que permitan guardar un color en el localstorage
+Trabajo practico que consiste en crear un proyecto de react que muestre un formulario con un input y un boton que permitan guardar un color en el localstorage para exponerlo posteriormente en un listado de colores.
 
 ## Trabajo practico
 
