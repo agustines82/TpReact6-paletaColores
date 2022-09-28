@@ -14,6 +14,10 @@ En caso de querer clonar el proyecto acceda al repositorio publico del mismo en 
 
 [Git](https://github.com/agustines82/TpReact6-paletaColores)
 
+## Netlify
+
+[Netlify]()
+
 ## autor
 
 -   Agustin Sampayo
