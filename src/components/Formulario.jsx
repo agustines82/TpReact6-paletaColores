@@ -57,7 +57,12 @@ const Formulario = () => {
         }
     };
 
-    const borrarColor = () => {};
+    const borrarColor = (colorx) => {
+        // hacer un arreglo nuevo sin la tarea a borrar
+        let listaColores2 = listaColores.filter((item) => item !== colorx);
+        //actualizo el state
+        setListaColores(listaColores2);
+    };
 
     return (
         <>
