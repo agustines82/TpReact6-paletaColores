@@ -8,7 +8,7 @@ const Color = ({ nombreColor, borrarColor }) => {
                 <article className="d-flex flex-column align-items-center cardColor">
                     <p className="lead m-0">{nombreColor}</p>
                     <aside>
-                        <div className={nombreColor}></div>
+                        <div className="cajaColor" style={{ background: nombreColor }}></div>
                     </aside>
                     <aside className="my-1">
                         <Button variant="danger" type="submit" size="sm" onClick={() => borrarColor(nombreColor)}>
