@@ -22,25 +22,25 @@ const Formulario = () => {
     //para el evento onSubmit del form usamos un manejador de eventos
     const handleSubmit = (e) => {
         e.preventDefault();
-        //debo validar que el color ingresado exista dentro de las propiedades del objeto
-        validar();
-        //guardo la variable color en la lista de colores
-        setListaColores([...listaColores, color]);
-        //reseteamos el valor de la variable color a su valor inicial
-        setColor("");
-        //limpiamos el Form control (value={color})
-    };
-
-    //funcion para validar que el color ingresado exista dentro de las propiedades del objeto
-    const validar = () => {
+        //debo validar que el color ingresado exista dentro de las propiedades del objeto.
         if (!coloresAutorizados.hasOwnProperty(color)) {
+            //si no existe tira el cartel
             Swal.fire({
                 icon: "error",
                 title: "Color no autorizado",
                 text: "Elije otro color",
             });
+            // y reseteamos el valor de la variable color a su valor inicial (se limpia el input)
+            setColor("");
+        } else {
+            //guardo la variable color en la lista de colores
+            setListaColores([...listaColores, color]);
+            //reseteamos el valor de la variable color a su valor inicial
+            setColor("");
+            //limpiamos el Form control (value={color})
         }
     };
+
     return (
         <>
             <section className="container">
