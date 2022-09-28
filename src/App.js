@@ -4,10 +4,14 @@ import Formulario from "./components/Formulario";
 import Color from "./components/Color";
 function App() {
     return (
-        <div>
+        <main>
             <Formulario />
-            <Color />
-        </div>
+            <section className="container">
+                <aside className="container row justify-content-center align-items-center">
+                    <Color />
+                </aside>
+            </section>
+        </main>
     );
 }
 

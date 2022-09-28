@@ -8,7 +8,7 @@ const Formulario = () => {
             <section className="container">
                 <Form className="container my-5 bg-ligth">
                     <Form.Group className="mb-3 ms-1" controlId="formBasicText">
-                        <Form.Label className="mt-2">Administrador de colores</Form.Label>
+                        <Form.Label className="mt-2 mb-0">Administrador de colores</Form.Label>
                         <hr></hr>
                         <div className="row">
                             <aside className="col-2 ms-3 muestra"></aside>

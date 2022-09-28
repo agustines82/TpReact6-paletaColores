@@ -9,3 +9,6 @@ form {
     border: thin solid black;
     background-color: blueviolet;
 }
+.w-20 {
+    width: 180px;
+}
