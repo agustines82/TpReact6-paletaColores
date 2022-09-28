@@ -13,11 +13,15 @@ Para mayor informacion sobre los requerimientos del practico acceda al siguiente
 En caso de querer clonar el proyecto acceda al repositorio publico del mismo en GitHub:
 
 [Git](https://github.com/agustines82/TpReact6-paletaColores)
+(en la rama main el proyecto permite tipear los colores en español, en la rama alternativa se acepta toda la gama de colores pero el ingreso de los datos se debe realizar en idioma ingles o hexadecimal.)
 
 ## Netlify
 
 Puedes ver el proyecto online
+igreso de datos en español:
 [Netlify](https://taupe-daffodil-168d9a.netlify.app/)
+ingreso de datos en ingles:
+[Netlify](https://deluxe-manatee-d8788b.netlify.app/)
 
 ## autor
 
