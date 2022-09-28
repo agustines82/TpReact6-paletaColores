@@ -1,11 +1,13 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Formulario from "./components/Formulario";
+import Color from "./components/Color";
 function App() {
     return (
-        <>
-            <h1>hola mundo</h1>
-        </>
+        <div>
+            <Formulario />
+            <Color />
+        </div>
     );
 }
 

@@ -1,0 +1,15 @@
+form {
+    height: 150px;
+    border: thin solid #575555;
+    box-shadow: -3px 3px rgb(69, 70, 70);
+    border-radius: 5px;
+}
+.muestra {
+    height: 80px;
+    width: 80px;
+    border: thin solid black;
+    background-color: blueviolet;
+}
+input {
+    height: 30px;
+}
