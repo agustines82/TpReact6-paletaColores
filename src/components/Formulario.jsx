@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import "../App.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Swal from "sweetalert2";
 
-//creo un arreglo de colores pre-definido que son los colores que el programa va a poner exponer. si
+//creo un objeto colores pre-definido que son los colores que el programa va a poner exponer. si es que el color no se encuetra entre las propiedades de este objeto entonces el programa expondrà un alert diciendo color no disponible:
+const coloresAutorizados = {
+    rojo: `#E80606`,
+    verde: `#1A6D02`,
+    amarillo: `#F8F806`,
+    azul: `#0615F8`,
+};
+
 const Formulario = () => {
     //en el evento onChange en el FormControl necesito ir guardando lo que se escribe, esto lo hago en la variable de estado color.
     const [color, setColor] = useState("");
@@ -14,6 +22,8 @@ const Formulario = () => {
     //para el evento onSubmit del form usamos un manejador de eventos
     const handleSubmit = (e) => {
         e.preventDefault();
+        //debo validar que el color ingresado exista dentro de las propiedades del objeto
+        validar();
         //guardo la variable color en la lista de colores
         setListaColores([...listaColores, color]);
         //reseteamos el valor de la variable color a su valor inicial
@@ -21,6 +31,16 @@ const Formulario = () => {
         //limpiamos el Form control (value={color})
     };
 
+    //funcion para validar que el color ingresado exista dentro de las propiedades del objeto
+    const validar = () => {
+        if (!coloresAutorizados.hasOwnProperty(color)) {
+            Swal.fire({
+                icon: "error",
+                title: "Color no autorizado",
+                text: "Elije otro color",
+            });
+        }
+    };
     return (
         <>
             <section className="container">
