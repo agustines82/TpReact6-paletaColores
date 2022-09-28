@@ -16,7 +16,8 @@ En caso de querer clonar el proyecto acceda al repositorio publico del mismo en 
 
 ## Netlify
 
-[Netlify]()
+Puedes ver el proyecto online
+[Netlify](https://taupe-daffodil-168d9a.netlify.app/)
 
 ## autor
 
