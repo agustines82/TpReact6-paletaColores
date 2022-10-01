@@ -24,7 +24,7 @@ const Formulario = () => {
     //para el evento onSubmit del form usamos un manejador de eventos
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (color.length > 2) {
+        if (color.trim().length > 2) {
             //guardo la variable color en la lista de colores
             setListaColores([...listaColores, color]);
             //reseteamos el valor de la variable color a su valor inicial
@@ -37,6 +37,7 @@ const Formulario = () => {
                 text: "Ingresa un color",
                 footer: "Solo acepta colores en ingles",
             });
+            setColor("");
         }
     };
 
